@@ -12,6 +12,7 @@ body {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
+    padding-bottom: 100px;
 }
 
 h1{
@@ -87,7 +88,8 @@ h2 {
 
 #lista-gif article footer img{
     border-radius: 50%;
-
+    width: 40px;
+    height: 40px;
 }
 .container-autor p{
 line-height: 1px;
@@ -105,6 +107,11 @@ line-height: 1px;
     justify-content: center;
     gap: 5px;
 }
+
+.gif{
+    max-width: 300px;
+}
+
 #footer-final-marie img{
    border-radius: 50%;
    width: 50px;
