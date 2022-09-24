@@ -1,0 +1,115 @@
+:root {
+    --bg-color-acento: gray; 
+    --ancho-imagen: 300px; 
+    --alto-imagen: 300px;
+    --alto-imagen: 300px;
+    --fuente-primaria: "Roboto", sans-serif;
+    --fuente-secundaria:   "Sofia", sans-serif;
+
+}
+body {
+    font-family: var(--fuente-primaria);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-family: var(--fuente-secundaria);
+}
+h2 {
+    font-size: 16px;
+}
+
+.container{
+    box-sizing: border-box;
+    background-color: aquamarine;
+    min-width: 90%;
+    padding: 15px;
+   
+}
+
+/*Diseño de la barra de busqueda*/
+.barra-busqueda {
+   
+}
+.barra-busqueda input{
+    border-radius: 8px;
+    padding: 5px;
+}
+.barra-busqueda button{
+    border-radius: 8px;
+    padding: 5px;
+    background-color: var(--bg-color-acento);
+    color: white;
+}
+
+/*diseño de busquedas anteriores*/
+.recientes {
+    background-color: blue;  
+}
+
+/*Diseño del Area de gif*/
+#lista-gif {
+
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+#lista-gif article{
+    width: 350px;
+    height: 350px;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+#lista-gif article img{
+   
+    
+    
+}
+#lista-gif article footer{
+    padding-left: 25px;
+    justify-self: end;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#lista-gif article footer img{
+    border-radius: 50%;
+
+}
+.container-autor p{
+line-height: 1px;
+}
+
+#footer-final-marie{
+    background-color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+#footer-final-marie img{
+   border-radius: 50%;
+   width: 50px;
+}
+
+ 
+
+/* Tool Bo*/
