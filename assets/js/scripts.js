@@ -114,6 +114,29 @@ const searchApi = async (q, offset) => {
     return busqueda.data;
 }
 
+const scrollOrTouch = async (event) => {
+    let element = event.target;
+    let scrollOffset = 0;
+    if (element.scrollingElement.scrollHeight - element.scrollingElement.scrollTop === element.scrollingElement.clientHeight) {
+            let localStorage = window.localStorage;
+            let estado = localStorage.getItem("estado");
+            if(estado === "trending"){
+                let trending = await obtenerTrending(scrollOffset, 10);
+                scrollOffset +=10;
+                //Paso 2: iterar por cada elemento del vector trending 
+                trending.map(trendGif => {
+                    //Paso 3: contruir un ndo html basado en la plantilla diseñada
+                    crearCajaGif(trendGif);
+                });
+            }else{
+                //Caso busqueda
+                buscar(scrollOffset, false);
+                scrollOffset+=10;
+            }
+        }
+    }
+
+
 const inicio = async () => {
     //Avisar al sistema que estamos viendo tranding
     let localStorage = window.localStorage;
@@ -136,26 +159,8 @@ const inicio = async () => {
 
     //Evento Scroll
     let scrollOffset = 0;
-    window.addEventListener('scroll', async (event) => {
-    let element = event.target;
-    if (element.scrollingElement.scrollHeight - element.scrollingElement.scrollTop === element.scrollingElement.clientHeight) {
-            let localStorage = window.localStorage;
-            let estado = localStorage.getItem("estado");
-            if(estado === "trending"){
-                let trending = await obtenerTrending(scrollOffset, 10);
-                scrollOffset +=10;
-                //Paso 2: iterar por cada elemento del vector trending 
-                trending.map(trendGif => {
-                    //Paso 3: contruir un ndo html basado en la plantilla diseñada
-                    crearCajaGif(trendGif);
-                });
-            }else{
-                //Caso busqueda
-                buscar(scrollOffset, false);
-                scrollOffset+=10;
-            }
-        }
-    });
+    window.addEventListener('scroll', scrollOrTouch);
+    window.addEventListener('touchmove',scrollOrTouch);
 }
 
 
