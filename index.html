@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
- 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-
     <link rel="stylesheet" href="assets/css/estilos.css">
-    
     <script src="assets/js/scripts.js"></script>
     <title> Giphy Explorer</title>
 </head>
@@ -19,69 +15,35 @@
     <div class="container">
         <header>
             <h1>Giphy Explorer</h1>
+          
         </header>
         <section class="barra-busqueda">
-            <input type="text" name="busqueda" id="busqueda" placeholder="Ingresa tu busqueda">
+            <label for="busqueda">  <p>Escribe una busqueda y presiona ENTER: </p></label>
+            <div>
+                <input type="search" name="busqueda" id="busqueda" placeholder="Ingresa tu busqueda">
             <button>LOG IN</button>
+            </div>
         </section>
         <section class="recientes">
          <h2>Busquedas recientes</h2>
-         <ul>
-            <li>Papas Fritas</li>
-            <li>Papas Fritas</li>
-
-            <li>Papas Frita 2</li>
+         <ul id="busquedas-recientes">
+          
          </ul>
         </section>
-        <main id="lista-gif">
+        <main id="lista-gif"> 
+<!--
             <article>
-                <img src="https://via.placeholder.com/100/0000FF/808080 ?Text=Digital.com" alt="" srcset="">
-                <footer>
-                    <div>
-                        <img src="https://via.placeholder.com/25/0000FF/808080 ?Text=Digital.com" alt="logo del autor" >
-                    </div>
-                    <div>
-                        <p><strong>Luis c.</strong></p>
-                        <p>@algo.com</p>
-                    </div>
-                </footer>
-            </article>
-            <article>
-                <img src="https://via.placeholder.com/250/0000FF/808080 ?Text=Digital.com" alt="" srcset="">
-                <footer>
-                    <div>
-                        <img src="https://via.placeholder.com/25/0000FF/808080 ?Text=Digital.com" alt="logo del autor" >
-                    </div>
-                    <div>
-                        <p><strong>Luis c.</strong></p>
-                        <p>@algo.com</p>
-                    </div>
-                </footer>
-            </article>
-            <article>
-                <img  src="https://via.placeholder.com/70/0000FF/808080 ?Text=Digital.com" alt="" srcset="">
+                <img class="gif"  src="" alt="" srcset="">
                 <footer>
                     <div class="imagen-autor">
-                        <img src="https://via.placeholder.com/25/0000FF/808080 ?Text=Digital.com" alt="logo del autor" >
+                        <img src="" alt="logo del autor" >
                     </div>
                     <div class="container-autor">
-                        <p ><strong>Luis c.</strong></p>
-                        <p>@algo.com</p>
+                        <p ><strong></strong></p>
+                        <p></p>
                     </div>
                 </footer>
-            </article>
-            <article>
-                <img src="https://via.placeholder.com/200/0000FF/808080 ?Text=Digital.com" alt="" srcset="">
-                <footer>
-                    <div>
-                        <img src="https://via.placeholder.com/25/0000FF/808080 ?Text=Digital.com" alt="logo del autor" >
-                    </div>
-                    <div>
-                        <p><strong>Luis c.</strong></p>
-                        <p>@algo.com</p>
-                    </div>
-                </footer>
-            </article>
+            </article>-->
         </main>
        
      
@@ -89,6 +51,6 @@
     <footer id="footer-final-marie">
         <img src="assets/imagenes/Marie alorscode.jpg">   
         Hecho con <svg viewBox="0 0 1792 1792" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="height: 0.8rem;"><path d="M896 1664q-26 0-44-18l-624-602q-10-8-27.5-26T145 952.5 77 855 23.5 734 0 596q0-220 127-344t351-124q62 0 126.5 21.5t120 58T820 276t76 68q36-36 76-68t95.5-68.5 120-58T1314 128q224 0 351 124t127 344q0 221-229 450l-623 600q-18 18-44 18z" fill="#e25555"></path></svg> por Marie <a href="https://www.instagram.com/alorscode/" target="_blank"> @alorscode</a>
-        </footer>
+    </footer>
 </body>
 </html>
